@@ -10,7 +10,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: #333;
-    padding: 20px;
+    padding: 10px;
     background-color: #f4f4f4;
 }
 
@@ -121,7 +121,8 @@ footer {
 
     .navbar {
         display:flex;
-        align-items: center;;
+        flex-direction: row;
+        align-items: center;
         width: 100%;
         background-color: #005691;
         overflow: auto;
@@ -129,6 +130,7 @@ footer {
         padding-bottom:3px;
         padding-left:3px;
         padding-right:3px;
+        padding:0%;
     }
 
     .navbar a {
@@ -146,4 +148,22 @@ footer {
 
     .active {
         background-color: #03395e;
+    }
+    .name{
+        color:black;
+        display:flex;
+        padding-right:0.5%;
+        font-family:handwritten;
+        font-size:37px;
+    }
+    .nameLogo{
+        padding-right:10px;
+        height:50px;
+        width:50px;
+        display:flex;
+        margin-left:auto;
+    }
+    @font-face {
+        font-family: handwritten;
+        src: url(fonts/cursive.ttf);
     }
