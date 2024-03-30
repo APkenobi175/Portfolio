@@ -4,27 +4,29 @@
     <title>Resume</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id=navbar class="navbar">
-            <a  href="index.html">Home</a>
-            <a class="active" href="resume.html">Resume</a>
-            <a href="projects.html"> Projects</a>
-            <a href="notes.html"> CS Notes</a>
-            </div>
+
     <header>
-        <h1>Ammon Phipps (undergoing redesign)</h1>
-    </header>
+        <h1>Ammon Phipps</h1>
+        <h2>Computer Science Student</h2>
+      </header>
+      <body>
+      <div class="nav" id="nav">
+        <a href="index.html">HOME</a>
+        <a class ="active" href="resume.html">RESUME</a>
+        <a href="#publications">PROJECTS</a>
+        <a href="#presentations">NOTES</a>
+        <a href="#contact">CONTACT</a>
+      </div>
     <div class="container">
         <section id="education">
-            <h2>Contact Information</h2>
+            <h2 class="titles">Contact Information</h2>
             <ul class="contact">
                 <li><img src="images/email.png" alt="email"> Email: Phippsammon175@gmail.com</li>
-                <li><img src="images/phone.png" alt="phone"> Phone: 123-456-7890</li> 
-                <li><img src="images/link.png" alt="link"> LinkedIn: linkedin.com/idonthavealinkedin</li>
+                <li><img src="images/phone.png" alt="phone"> Phone: 385-216-2830</li> 
             </ul>
         </section>
         <section id="education">
-            <h2>Profile</h2>
+            <h2 class="titles">Profile</h2>
             <ul class="contact">
                 <p>Dependable and dedicated worker. Graduated high school with a 3.9 GPA and was involved in many activities where problem solving, teamwork, and other valuable skills were used, including: FBLA, AP and Honors programs. I know the importance of hard work. I am passionate about the work I do and make sure it is done the best It can be. I am a student at Utah State University working towards a Computer Science degree.
 
@@ -33,7 +35,7 @@
         </section>
         
         <section id="education">
-            <h2>Education</h2>
+            <h2 class="titles">Education</h2>
             <ul>
                 <li><strong>Utah State University</strong> - Currently Attending</li>
                 <li><strong>BATC community college</strong> - Attended 2021</li>
@@ -43,37 +45,49 @@
     </div>
     
     <section id="work-experience">
-        <h2>Work Experience</h2>
+        <h2 class="titles">Work Experience</h2>
         <div class="job">
             <h3>Autoliv North America</h3>
-            <p>Processing Manager, April 2022 - Present</p>
-            <p>Oversaw a team-focused environment, enhancing production processes and safety practices while coordinating management communication and continuous improvement initiatives.</p>
+            <ul class = resume>
+                <b><p >Processing Manager, April 2022 - Present</p></b>
+                <li>Managed team and assisted supervisor in creating a healthy work environment</li>
+                <li class="resume">  Worked with team members in the production process</li>
+                <li>    Worked closely with management and communicated with team members </li>
+                <li>   Managed Timesheets</li>
+                <li>  Lead team-centered workshops as well as create new standards to strive for continuous improvement</li>
+                <li>   Trained team members on process and safety practices</li>
+                <li>   Safely operated and observed various production machines</li>
+            </ul>
+                
         </div>
         <div class="job">
             <h3>Autoliv North America</h3>
-            <p>Processing Associate, December 2021 - April 2022</p>
-            <p>Worked closely as a team mixing and handeling a variety of hazardous materials safely. Participated in Lean manufacturing concepts</p>
+            <b><p>Processing Associate, December 2021 - April 2022</p></b>
+            <ul>
+            <li>Participated in Lean Manufacturing concepts</li>
+            <li>Mixed and handled a variety of hazardous materials safely</li> 
+            <li>Worked closely with a team </li> 
+            </ul>
         </div>
+    
         <div class="job">
             <h3>R&M Janitorial</h3>
-            <p>Custodian, 2018 - 2021</p>
-            <p>Kept building premises clean, and maintained cleaning equipment and cleaning schedules</p>
-        </div>
-        <div class="job">
-            <h3>Epic Games</h3>
-            <p>Software Engineer (real), April 1999 - 2001</p>
-            <p>Worked with a team of skilled programmers to create software used by video gamers, and enthusiests alike</p>
-        </div>
-        <div class="job">
-            <h3>Google</h3>
-            <p>Janitor, June 1865 - 1943</p>
-            <p>Kept google's office spaces clean and clutter free. Got let go for leaking important documents to the United States government during world war 2. My Sacrifice tipped the tides in the Allies favor</p>
+            <b><p>Custodian, 2018 - 2021</p></b>
+            <ul>
+                <li>Kept building spaces premises clean inside and outside</li>
+                <li>Trained new employees on how to properly and most effectively do the job</li>
+                <li>Supervised supplies in inventory and restocked if needed</li>
+                <li>Kept janitorial closets clean and organized.</li>
+                <li>Maintained cleaning equipment</li>
+                <li>Organized cleaning schedules and sign off sheets for custodial team</li>
+                <li>Mixed, used and properly stored hazardous chemical cleaners to reduce risk of injury or illness</li>
+            </ul>
         </div>
         
     </section>
 
     <section id="skills">
-        <h2>Programming Languages and Technological Skills</h2>
+        <h2 class="titles">Programming Languages and Technological Skills</h2>
         <ul>
             <li><img src="images/python2.png">Python</li>
             <li><img src="images/java2.png">Java</li>
@@ -82,7 +96,6 @@
             <li><img src="images/js.png">JavaScript</li>
             <li><img src="images/git.png">Git</li>
             <li><img src="images/office.png">Microsoft Office Specialist</li>
-            <li><img src="images/Ammon.png">Ammon Programming language</li>
 
         </ul>
     </section>

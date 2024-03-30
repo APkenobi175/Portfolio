@@ -1,49 +1,48 @@
 
-body, h1, h3, p, ul {
+h3, p, ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    padding: 10px;
-    background-color: #f4f4f4;
+body{
+    font-family: Arial, sans-serif; 
+    margin:0;
+    background-image:url(images/landscape.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-header h1 {
-    font-size: 2em;
-    color: #005691;
-}
-
-header p {
-    text-align: center;
-    color: #666;
-}
+header{ 
+    background-color: #FF3B3F; 
+    padding: 20px;
+    color: white; 
+    text-align: center; 
+ }
+ 
+ 
+ .nav {
+    background-color: #333;
+    padding: 10px 0; 
+ }
+ .nav a {
+    color: white; 
+    text-decoration: none;
+    padding: 15px 20px; 
+    display: inline-block;
+    text-decoration: none;
+ }
 
 section {
     margin-bottom: 20px;
 }
 
-h2 {
-    background-color: #005691;
-    color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-}
+
 
 #education ul, #skills ul, .job, #contact, .contact-info{
-    background-color: #fff;
+    background-color: #ffffffa9;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -119,51 +118,37 @@ footer {
     margin-right: 10px; 
     }
 
-    .navbar {
-        display:flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        background-color: #005691;
-        overflow: auto;
-        padding-top:3px;
-        padding-bottom:3px;
-        padding-left:3px;
-        padding-right:3px;
-        padding:0%;
+.nav a:hover {
+    background-color: #098ae3;
+    }
+     
+.active {
+    background-color: #03395e;
     }
 
-    .navbar a {
-        float: center;
-        text-align: center;
-        padding: 12px;
-        color: white;
-        text-decoration: none;
-        
+.nav a {
+    color: white; 
+    text-decoration: none;
+    padding: 15px 20px; 
+    display: inline-block;
+    text-decoration: none;
     }
 
-    .navbar a:hover {
-        background-color: #098ae3;
+.titles {
+    background-color: #8b572abd;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
     }
 
-    .active {
-        background-color: #03395e;
-    }
-    .name{
-        color:black;
-        display:flex;
-        padding-right:0.5%;
-        font-family:handwritten;
-        font-size:37px;
-    }
-    .nameLogo{
-        padding-right:10px;
-        height:50px;
-        width:50px;
-        display:flex;
-        margin-left:auto;
-    }
-    @font-face {
-        font-family: handwritten;
-        src: url(fonts/cursive.ttf);
-    }
+
+    html {
+        overflow-y: scroll;
+      }
+
+#work-experience li{
+    list-style-type: circle;
+    padding-left: 10px;
+    list-style-position: inside;
+    margin-bottom:10px;
+}

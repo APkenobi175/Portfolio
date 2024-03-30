@@ -86,4 +86,8 @@ header{
       height: 50vw;
     }
   }
+
+  html {
+    overflow-y: scroll;
+  }
   
