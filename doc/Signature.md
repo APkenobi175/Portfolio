@@ -15,5 +15,6 @@
 | Date        	| Time Spent | Events
 |--------------	|------------|--------------------
 | March 4, 2024 | 1 hour     | Created repository, set up basic webpage for portfolio
+| Test!||
 | March 29, 2024| 1 hour     | Redid the resume page, added consistant header and nav bar - change resume so its all accurate
 | TOTAL       	| 2 hours     | 
