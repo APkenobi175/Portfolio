@@ -1,6 +1,8 @@
 // ******************ERRORS********************************
 // Throws UnderflowException as appropriate
-
+import java.util.Queue;
+import java.util.LinkedList;
+import java.util.List;
 class UnderflowException extends RuntimeException {
     /**
      * Construct this exception object.
@@ -72,24 +74,27 @@ public class Tree {
         if (root == null)
             return treeName + " Empty tree";
         else
-            return treeName + "\n" + toString(root);
+            return treeName + "\n" + toString(root, 0);
 
 
 
     }
 
-    public String toString(BinaryNode node) {
+    public String toString(BinaryNode node, int depth) {
         if(node == null){
             return""; //  Base case: Return empty string if null
 
         }
 
-        // Traverse right subtree, then left subtree
-        String right = toString(node.right);
-        String current = node.element.toString() + "\n"; // After node printed append new line
-        String left = toString(node.left);
+        // In order to match the desired output we need to create an indendation based on the depth of the node.
 
-        return right + current + left;
+        String tree = " ".repeat(depth) + node.element + "\n"; // Then go to a new line
+
+        // Traverse right subtree, then left subtree
+        tree += toString(node.right, depth + 1);
+        tree += toString(node.left, depth + 1);
+
+        return tree;
     }
     /**
      * Return a string displaying the tree contents as a single line
@@ -118,52 +123,147 @@ public class Tree {
 
 
     /**
-     * The complexity of finding the deepest node is O(???)
-     * @return
+     * The complexity of finding the deepest node is O(n) Every node is processed once
      */
+
     public Integer deepestNode() {
-        return -1;
+        if(root == null){
+            return null; // DON'T FOLLOW NULL NODES!!!!!!!!
+        }
+        Queue<BinaryNode> queue = new LinkedList<>(); // Using java's builtin queue and linked list implementations
+        queue.add(root); // Start with root
+        BinaryNode currentNode = null; // initiate
+
+        while(!queue.isEmpty()){
+            currentNode = queue.poll(); // dequeue node and enqueue the left and right children if they exist
+
+            if(currentNode.left != null){
+                queue.add(currentNode.left);
+
+            }
+            if(currentNode.right != null){
+                queue.add(currentNode.right);
+            }
+            // We will keep dequeuing and enqueuing until the node is null, once that happens we have reached the deepest node
+        }
+        return currentNode.element; // This is the value of the deepest node
+
     }
 
     /**
-     * The complexity of finding the flip is O(???)
+     * The complexity of finding the flip is O(n) because we visit each node once
      * reverse left and right children recursively
      */
     public void flip() {
-        flip(root);
+        flip(root); // Start at the root
     }
     private void flip(BinaryNode t){
+        if(t == null){
+            return; // base case never follow a null node :)))
+        }
 
+        //Swap left and right children
+
+        BinaryNode temp = t.left; // Temporary Node
+        t.left = t.right; //set the left node to the right node
+        t.right = temp; // set the right node back to our temp node to finish swapping
+
+        // Recursively do this for all the nodes
+        flip(t.left);
+        flip(t.right);
     }
 
     /**
      * Counts number of nodes in specified level
-     * The complexity of nodesInLevel is O(???)
+     * The complexity of nodesInLevel is O(n) because we have to visit every node in the tree
      * @param level Level in tree, root is zero
      * @return count of number of nodes at specified level
      */
     public int nodesInLevel(int level) {
-        System.out.println("nodesInLevel needs to return the nodes at " + level);
-        return 0;
+        return nodesInLevel(root, level); // Recursion
+
+    }
+
+    private int nodesInLevel(BinaryNode node, int level) {
+        if(node == null){
+            return 0; // Base case if null there are no nodes
+        }
+        if(level==0){
+            return 1; //if we reach level 0 that means we reached the desired level, we'll keep subtracting by 1 til we get here
+        }
+
+        //Recursively count nodes in left and right subtrees
+        return nodesInLevel(node.left, level-1) + nodesInLevel(node.right, level-1);
+
     }
 
     /**
      * Print all paths from root to leaves
-     * The complexity of printAllPaths is O(???)
+     * The complexity of printAllPaths is O(n) because we look at every node
      */
     public void printAllPaths() {
-        System.out.println("printAllPaths does nothing");
+        int[] path = new int[10000000]; //we prolly won't exceed this number I bet you
+        printAllPaths(root, path, 0);
     }
 
+    private void printAllPaths(BinaryNode node, int[] path, int length) {
+        if(node == null){
+            return; // If node is null return base case
+        }
+        path[length] = node.element; // Add current node to path
+        length++; // Keep track of length of path
 
+        //if its a leaf node print the path
+        if(node.left == null && node.right == null){
+            printPath(path, length);
+        } else{
+            printAllPaths(node.left, path, length);
+            printAllPaths(node.right, path, length);
+        }
+    }
+
+    // Function to print array path
+    private void printPath(int[] path, int length) {
+        for(int i = 0; i<length; i++){
+            System.out.print(path[i]+ " ");
+        }
+        System.out.println();
+    }
+
+    private int bstCount=0;
     /**
      * Counts all non-null binary search trees embedded in tree
-     *  The complexity of countBST is O(???)
+     *  The complexity of countBST depends on tree. if its balanced its O(logn) if its not balanced its O(n)
      * @return Count of embedded binary search trees
      */
+
     public Integer countBST() {
-        if (root == null) return 0;
-        return -1;
+        bstCount=0;
+        countBSTHelper(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        return bstCount;
+    }
+
+    private boolean countBSTHelper(BinaryNode node, int min, int max) {
+        if(node == null){
+            return true; // empty subtree is a bst
+
+        }
+        // check if crrent node viilates BST properties
+
+        if(node.element <= min || node.element >= max){
+            return false;
+        }
+
+        boolean isLeftBST = countBSTHelper(node.left, min, node.element);
+        boolean isRightBST = countBSTHelper(node.right, node.element, max);
+
+        if(isLeftBST && isRightBST){
+            bstCount++;
+            return true;
+        }
+        return false;
+
+
     }
 
     /**
@@ -230,8 +330,27 @@ public class Tree {
     /**
      * Remove all paths from tree that sum to less than given value
      * @param sum: minimum path sum allowed in final tree
+     *           This is also O(n) because we have to visit every node
      */
     public void pruneK(Integer sum) {
+        root = pruneK(root, 0, sum);
+    }
+
+    private BinaryNode pruneK(BinaryNode t, int sum, int minSum) {
+        if(t == null){
+            return null; // nothing to prune
+        }
+        sum += t.element; // add current node to level value
+
+        // recursively prune left and right subtrees
+        t.left = pruneK(t.left, sum, minSum);
+        t.right = pruneK(t.right, sum, minSum);
+
+        //if node is a leaf and sum is less than K, prune it!
+        if (t.left == null && t.right == null && sum < minSum){
+            return null; // - Prune the node
+        }
+        return t; // otherwise keep it in the tree
     }
 
     /**
@@ -249,9 +368,34 @@ public class Tree {
      * @param b second node
      * @return String representation of ancestor
      */
-    public BinaryNode lca(BinaryNode  t,Integer a, Integer b) {
-        return t;
 
+    public BinaryNode lca(BinaryNode  t,Integer a, Integer b) {
+        if(!nodeExists(t, a) || !nodeExists(t, b)){
+            return null; // Was having issues because node 62
+            // doesn't exist in treeOne but
+            // it was still finding an LCA,
+            // this prevents that from happening.
+            // It does return null though, so I am not
+            // sure what the most correct way to go about this was
+
+        }
+
+        if(t ==null){
+            return null;
+        }
+
+        // if both a and b are smaller than current node go left
+        if(a<t.element && b<t.element){
+            return lca(t.left,a,b);
+        }
+
+        //if both a and b are greater than current node go right
+        if(a>t.element && b>t.element){
+            return lca(t.right,a,b);
+        }
+
+        // return t if t is the LCA because a and b are on different sides
+        return t;
     }
     public Integer sumAll(){
         BinaryNode  r =   root;
@@ -269,11 +413,57 @@ public class Tree {
         return l.element;
 
     }
+    private boolean nodeExists(BinaryNode t, Integer key){
+        if(t == null){
+            return false;
+
+        }
+        if(t.element.equals(key)) {
+            return true;
+        }
+        if (key< t.element){
+            return nodeExists(t.left, key);
+        }else{
+            return nodeExists(t.right, key);
+        }
+
+    }
     /**
-     * Balance the tree
+     * Balance the tree - do not use rotations,
+     * Instead rebuild the tree
      */
     public void balanceTree() {
-        //root = balanceTree(root);
+        // Collect elements in sorted list
+        List<Integer> sortedList = new LinkedList<>();
+        TraverseCollect(root, sortedList); // Helper method
+
+        // Rebuild the tree as balanced binary search tree
+        root = buildBalancedBST(sortedList, 0, sortedList.size()-1);
+    }
+
+    private void TraverseCollect(BinaryNode root, List<Integer> sortedList) {
+        if (root == null) return;
+        // traverse left subtree
+        TraverseCollect(root.left, sortedList);
+        // add element
+        sortedList.add(root.element);
+        // traverse right
+        TraverseCollect(root.right, sortedList);
+
+    }
+    private BinaryNode buildBalancedBST(List<Integer> sortedList, int start, int end) {
+        if (start > end) return null;
+
+        // calculate middle index
+        int mid = (start + end) / 2;
+
+        // create a node with the middle element (root)\
+        BinaryNode node = new BinaryNode(sortedList.get(mid));
+
+        // recursively build left and right subtrees
+        node.left = buildBalancedBST(sortedList, start, mid - 1);
+        node.right = buildBalancedBST(sortedList, mid + 1, end);
+        return node;
     }
 
     /**
@@ -283,6 +473,22 @@ public class Tree {
      * @param b highest value
      */
     public void keepRange(Integer a, Integer b) {
+        root = keepRange(root, a, b);
+    }
+
+    private BinaryNode keepRange(BinaryNode root, Integer a, Integer b) {
+        if (root == null) return null;
+        // if current node value less than a, discard node
+        if(root.element<a){
+            return keepRange(root.right, a, b);
+
+        }
+        if(root.element>b){
+            return keepRange(root.left, a, b);
+        }
+        root.left = keepRange(root.left, a, b);
+        root.right = keepRange(root.right, a, b);
+        return root;
     }
 
     // Basic node stored in unbalanced binary  trees
