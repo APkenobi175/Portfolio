@@ -1,10 +1,12 @@
-public  class GridLocation {
+public  class GridLocation implements Comparable<GridLocation> {
     public final int row;
     public final int col;
+    public int whenFlood;
 
     public GridLocation(int row, int col) {
         this.row = row;
         this.col = col;
+        this.whenFlood = Integer.MAX_VALUE;
 
     }
 
@@ -18,6 +20,10 @@ public  class GridLocation {
     @Override public String toString() {
         String sb = "{ " + row + ", " + col + " } ";
         return sb;
+    }
+    // Compare based on whenFlood time
+    @Override public int compareTo(GridLocation other) {
+        return Integer.compare(this.whenFlood, other.whenFlood);
     }
 
 }

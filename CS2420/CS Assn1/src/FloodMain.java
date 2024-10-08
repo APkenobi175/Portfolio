@@ -57,7 +57,7 @@ public class FloodMain {
         });
         return result;
     }
-/*  Will be used in Program 3
+//  Will be used in Program 3
     private JButton makeWhenFloodButton() {
         var result = new JButton("When Flood!");
         result.addActionListener((ActionEvent e) -> {
@@ -73,7 +73,7 @@ public class FloodMain {
             runSimulation((File) fileSelector.getSelectedItem(), 3);
         });
         return result;
-    }*/
+    }
 
     /* Builds the control panel. */
     private JPanel makeControlPanel() {
@@ -106,10 +106,10 @@ public class FloodMain {
         var showFloodingR = makeShowFloodingRecursiveButton();
         panel.add(showFloodingR);
 //  Will be used in program 3
-//        var whenFloodButton = makeWhenFloodButton();
-//        panel.add(whenFloodButton);
-//        var whenFloodButtonExhaustive = makeWhenFloodButtonExhaustive();
-//        panel.add(whenFloodButtonExhaustive);
+        var whenFloodButton = makeWhenFloodButton();
+        panel.add(whenFloodButton);
+        var whenFloodButtonExhaustive = makeWhenFloodButtonExhaustive();
+        panel.add(whenFloodButtonExhaustive);
         container.add(panel);
 
         /* The status line. */
@@ -192,7 +192,7 @@ public class FloodMain {
                             display.setFlooding(flooded);
                             display.repaint();
                             break;
-/*      Will be used in program 3
+//      Will be used in program 3
                         case 2:
                             window.setTitle("When Flood ");
                             var whenFlood = f.whenFlood();
@@ -206,7 +206,7 @@ public class FloodMain {
                             terrain.heights = whenFloodE;
                             display.setTerrain(terrain);
                             display.repaint();
-                            break;*/
+                            break;
                         case 4:
                             window.setTitle("Terrain");
                             display.repaint();

@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.ArrayList;
 
 public class Flooding {
     int[][] terrain;
@@ -7,6 +8,7 @@ public class Flooding {
     int height;
     int rows;
     int cols;
+    int[][] whenFlood;
 
     Flooding(int[][] terrain, GridLocation[] sources, int height) {
         this.terrain = terrain;
@@ -14,6 +16,132 @@ public class Flooding {
         this.height = height;
         rows = terrain.length;
         cols = terrain[0].length;
+    }
+    // WhenFlood using priority queue
+    public int[][] whenFlood(){
+        int insertCt = 0;
+
+        // Once again initialize whenFlood matrix with large values
+        whenFlood = new int[rows][cols];
+        for (int i = 0; i< rows; i++) {
+            for (int j = 0; j< cols; j++) {
+                whenFlood[i][j] = Integer.MAX_VALUE;
+            }
+        }
+
+        // Create AVLTree to keep track of cells to process instead of an arraylist
+        AVLTree<GridLocation> toDoList = new AVLTree<>();
+
+        // Add water sources to the to-do list
+        for (GridLocation source : sources) {
+            int row = source.row;
+            int col = source.col;
+            whenFlood[row][col] = terrain[row][col];
+            source.whenFlood = terrain[row][col];
+            toDoList.insert(source);
+            insertCt++;
+        }
+
+        // Process to do list
+
+        while (!toDoList.isEmpty()){
+            GridLocation current = toDoList.findMin();
+            toDoList.deleteMin();
+            int currentRow = current.row;
+            int currentCol = current.col;
+            int currentFloodTime = whenFlood[currentRow][currentCol];
+
+
+            for (GridLocation neighbor : getNeighbors(currentRow, currentCol)) {
+                int neighborRow = neighbor.row;
+                int neighborCol = neighbor.col;
+                int newFloodTime = Math.max(terrain[neighborRow][neighborCol], currentFloodTime);
+
+                if (newFloodTime < whenFlood[neighborRow][neighborCol]){
+                    whenFlood[neighborRow][neighborCol] = newFloodTime;
+                    neighbor.whenFlood = newFloodTime;
+                    toDoList.insert(neighbor);
+                    insertCt++;
+                }
+            }
+        }
+
+        // Print the total number of nodes added to the to-do list
+        System.out.println("PQ Nodes " + String.format("%,5d", insertCt));
+
+        // Return the whenFlood matrix
+        return whenFlood;
+
+
+
+
+    }
+    public int[][] whenFloodExhaustive(){
+        int insertCount = 0;
+
+        // Initialize the whenFlood matrix with large values that are cells that are not flood initially
+        whenFlood = new int[rows][cols];
+        for (int i = 0; i< rows; i++){
+            for (int j = 0; j< cols; j++){
+                whenFlood[i][j] = Integer.MAX_VALUE; // all cells are unflooded initially
+
+            }
+        }
+
+        // TO DO LIST TO KEEP TRACK OF CELLS
+        ArrayList<GridLocation> toDoList = new ArrayList<>();
+
+        // Add all initial water sources to the to do list
+        for (GridLocation source : sources){
+            int row = source.row;
+            int col = source.col;
+            whenFlood[row][col] = terrain[row][col]; // the flood level is its terrain level
+            toDoList.add(source); // Add source to to-do list
+            insertCount++;
+        }
+       // Processing the to do list:
+        while(!toDoList.isEmpty()){
+            // Get the next item from the to do list
+            GridLocation current = toDoList.remove(0);
+            int currentRow = current.row;
+            int currentCol = current.col;
+            int currentFloodTime = whenFlood[currentRow][currentCol];
+
+            // Get the neighbors of the current cell using getNeighbors helper method
+            for (GridLocation neighbor : getNeighbors(currentRow, currentCol)){
+                int neighborRow = neighbor.row;
+                int neighborCol = neighbor.col;
+
+                // calculate potential new flood time
+                int newFloodTime = Math.max(terrain[neighborRow][neighborCol], currentFloodTime);
+                if (newFloodTime < whenFlood[neighborRow][neighborCol]){
+                    whenFlood[neighborRow][neighborCol] = newFloodTime;
+                    toDoList.add(neighbor);
+                    insertCount++;
+                }
+            }
+
+        }
+        // Print the total number of nodes in the to do list
+        System.out.println("Exhaustive Nodes " + String.format("%5d", insertCount));
+        return whenFlood;
+    }
+    private ArrayList<GridLocation> getNeighbors(int row, int col){
+        ArrayList<GridLocation> neighbors = new ArrayList<>();
+        if (row > 0) {
+            neighbors.add(new GridLocation(row - 1, col)); // Up
+        }
+        if (row < rows - 1) {
+            neighbors.add(new GridLocation(row + 1, col)); // Down
+        }
+        if (col > 0) {
+            neighbors.add(new GridLocation(row, col - 1)); // Left
+        }
+        if (col < cols - 1) {
+            neighbors.add(new GridLocation(row, col + 1)); // Right
+        }
+
+        return neighbors;
     }
 
 
