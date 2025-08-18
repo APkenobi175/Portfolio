@@ -1,58 +1,135 @@
 const isDarkMode = () => {
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
-}
+};
 
 /* ===========================
    Notes Page Builder (STATIC)
    =========================== */
 
-/** Manually list your notes here. */
 const NOTES = [
   {
     course: "CS2420",
-    date: "September 5, 2024",
-    topic: "First Lecture",
+    date: "2024-09-05",
+    topic: "First Lecture - Big O, and Complexity",
     file: "doc/Notes/9-5-24.md"
   },
   {
     course: "CS2420",
-    date: "September 10, 2024",
-    topic: "Second Lecture",
+    date: "2024-09-10",
+    topic: "Binary Search Tree",
     file: "doc/Notes/9-10-24.md"
   },
+  {
+    course: "CS2420",
+    date: "2024-09-12",
+    topic: "Binary Search Trees and AVL Trees",
+    file: "doc/Notes/9-12-24.md"
+  },
+  {
+    course: "CS2420",
+    date: "2024-09-17",
+    topic: "AVL Trees Continued... and Splay Trees",
+    file: "doc/Notes/9-17-24.md"
+  },
+  {
+    course: "CS2420",
+    date: "2024-09-24",
+    topic: "Hashing/Hash Tables",
+    file: "doc/Notes/9-24-24.md"
+  },
+  {
+    course: "CS2420",
+    date: "2024-10-08",
+    topic: "Priority Queues and Heaps",
+    file: "doc/Notes/10-8-24.md"
+  },
+    {
+    course: "CS2420",
+    date: "2024-10-10",
+    topic: "More Heaps",
+    file: "doc/Notes/10-10-24.md"
+  },
+    {
+    course: "CS2420",
+    date: "2024-10-22",
+    topic: "Up-Tree",
+    file: "doc/Notes/10-22-24.md"
+  },
+    {
+    course: "CS2420",
+    date: "2024-10-29",
+    topic: "Graphs",
+    file: "doc/Notes/10-29-24.md"
+  },
+      {
+    course: "CS2420",
+    date: "2024-11-05",
+    topic: "Graph Algorithms",
+    file: "doc/Notes/11-5-24.md"
+  },
+
+  {
+    course: "CS2420",
+    date: "2024-11-21",
+    topic: "Greedy Algorithms",
+    file: "doc/Notes/11-21-24.md"
+  },
+  // Add more notes here...
 ];
 
+// Format YYYY-MM-DD → "Month DD, YYYY"
+// Format YYYY-MM-DD → "Month DD, YYYY"
+function formatDate(dateString) {
+  // Expect input like "2024-09-05" (YYYY-MM-DD)
+  const [year, month, day] = dateString.split('-').map(Number);
+
+  // Subtract 1 from month because JS Date months are 0-based
+  const dateObj = new Date(year, month - 1, day);
+
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return dateObj.toLocaleDateString('en-US', options);
+}
+
+
+
+// Entry point called by notes.html
 async function buildNotesPage() {
   const root = document.getElementById('notes-root');
   if (!root) return;
 
+  // Group by course
   const byCourse = new Map();
   for (const n of NOTES) {
     if (!byCourse.has(n.course)) byCourse.set(n.course, []);
     byCourse.get(n.course).push(n);
   }
 
-  for (const [course, arr] of byCourse) {
+  // Sort newest → oldest
+  for (const [, arr] of byCourse) {
     arr.sort((a, b) => b.date.localeCompare(a.date));
   }
 
   const frag = document.createDocumentFragment();
+
   for (const [course, arr] of byCourse) {
     const section = document.createElement('section');
-    section.className = 'course-block';
 
-    const h = document.createElement('div');
-    h.className = 'course-title';
-    h.textContent = course + " Notes";
-    section.appendChild(h);
+    // Brown title bar
+    const titleEl = document.createElement('h2');
+    titleEl.className = 'titles';
+    titleEl.textContent = `${course} Notes`;
+    section.appendChild(titleEl);
 
-    const wrap = document.createElement('div');
-    wrap.className = 'accordion';
-
+    // Each note gets its own white box
     for (const note of arr) {
+      const box = document.createElement('div');
+      box.className = 'contact-info note-box';  // adds note-box class
+
+
       const details = document.createElement('details');
+
       const summary = document.createElement('summary');
-      summary.textContent = `${note.date} — ${note.topic}`;
+      summary.textContent = `${formatDate(note.date)} — ${note.topic}`;
       details.appendChild(summary);
 
       const body = document.createElement('div');
@@ -64,23 +141,27 @@ async function buildNotesPage() {
       links.innerHTML = `<a href="${note.file}" target="_blank">Open raw Markdown ↗</a>`;
       details.appendChild(links);
 
+      // Lazy-load & render Markdown on first open
       details.addEventListener('toggle', async () => {
         if (!details.open || body.dataset.loaded) return;
         try {
-          const res = await fetch(note.file, { cache: 'no-store' });
+          const url = new URL(note.file, document.baseURI).toString();
+          const res = await fetch(url, { cache: 'no-store' });
+          if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
           const md = await res.text();
-          body.innerHTML = window.marked ? marked.parse(md) : `<pre>${escapeHtml(md)}</pre>`;
+          body.innerHTML = (window.marked ? marked.parse(md) : `<pre>${escapeHtml(md)}</pre>`);
           body.dataset.loaded = '1';
         } catch (e) {
+          console.error('Markdown fetch failed:', e);
           body.innerHTML = `<div class="bad-link">Could not load: ${note.file}</div>`;
           body.dataset.loaded = '1';
         }
       });
 
-      wrap.appendChild(details);
+      box.appendChild(details);
+      section.appendChild(box);
     }
 
-    section.appendChild(wrap);
     frag.appendChild(section);
   }
 
