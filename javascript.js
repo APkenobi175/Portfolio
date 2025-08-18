@@ -10,9 +10,15 @@ const isDarkMode = () => {
 const NOTES = [
   {
     course: "CS2420",
-    date: "2024-09-05",
+    date: "September 5, 2024",
     topic: "First Lecture",
     file: "doc/Notes/9-5-24.md"
+  },
+  {
+    course: "CS2420",
+    date: "September 10, 2024",
+    topic: "Second Lecture",
+    file: "doc/Notes/9-10-24.md"
   },
 ];
 
