@@ -1,18 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <title>Resume</title>
-    <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/Ammon2.png" type="image/x-icon"/>
+  <title>CS Notes</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Markdown renderer -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
+
+<header>
+  <h1>Ammon Phipps</h1>
+  <h2>Computer Science Student</h2>
+</header>
 <body>
-    <div id=navbar class="navbar">
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a href="projects.html"> Projects</a>
-            <a class="active" href="notes.html"> CS Notes</a>
-    </div>
-            
+  <div class="nav" id="nav">
+    <a href="index.html">HOME</a>
+    <a href="resume.html">RESUME</a>
+    <a href="projects.html">PROJECTS</a>
+    <a class="active" href="notes.html">NOTES</a>
+    <a href="#contact">CONTACT</a>
+  </div>
 
-        <p>Notes page coming soon ( i can take notes on the command line and upload them to github :))</p>
+  <div class="notes-wrap">
+    <h1>Notes</h1>
+    <p class="muted">Dropdowns are labeled <strong>DATE — TOPIC</strong>. Click to render the Markdown.</p>
+    <div id="notes-root"></div>
+  </div>
 
-        </body>
+  <script src="javascript.js"></script>
+  <script>
+    buildNotesPage();
+  </script>
+</body>
+</html>
