@@ -12,7 +12,7 @@ const NOTES = [
     course: "CS2420",
     date: "2024-09-05",
     topic: "First Lecture",
-    file: "doc/notes/9-5-24.md"
+    file: "doc/Notes/9-5-24.md"
   },
 ];
 
