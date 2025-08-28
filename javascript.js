@@ -79,13 +79,19 @@ const NOTES = [
     course: "CS2610",
     date: "2025-08-25",
     topic: "First Lecture",
-    file: "CS2610/Notes/8-25-25.md"
+    file: "CS2610/Notes/8-27-25.md"
   },
     {
     course: "CS2810",
     date: "2025-08-25",
     topic: "First Lecture",
     file: "CS2810/Notes/8-25-25.md"
+  },
+      {
+    course: "CS2810",
+    date: "2025-08-25",
+    topic: "Boolean Algebra",
+    file: "CS2810/Notes/8-27-25.md"
   },
   
   // Add more notes here...
