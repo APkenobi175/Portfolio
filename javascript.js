@@ -99,6 +99,13 @@ const NOTES = [
     topic: "Logic Gates",
     file: "CS2810/Notes/8-29-25.md"
   },
+
+          {
+    course: "CS2810",
+    date: "2025-09-03",
+    topic: "Logic Gates",
+    file: "CS2810/Notes/9-3-25.md"
+  },
   
   
   // Add more notes here...
