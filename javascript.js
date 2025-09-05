@@ -106,6 +106,19 @@ const NOTES = [
     topic: "Logic Gates",
     file: "CS2810/Notes/9-3-25.md"
   },
+
+      {
+    course: "CS2610",
+    date: "2025-09-04",
+    topic: "Ports, Sockets, Protocols, Advanced Python",
+    file: "CS2610/Notes/9-4-25.md"
+  },
+            {
+    course: "CS2810",
+    date: "2025-09-05",
+    topic: "",
+    file: "CS2810/Notes/9-5-25.md"
+  },
   
   
   // Add more notes here...
