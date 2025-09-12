@@ -125,7 +125,44 @@ const NOTES = [
     topic: "Advanced Python",
     file: "CS2610/Notes/9-6-25.md"
   },
-  
+
+
+  {
+    course: "CS2810",
+    date: "2025-09-08",
+    topic: "ALUs",
+    file: "CS2810/Notes/9-8-25.md"
+  },
+
+   {
+    course: "CS2810",
+    date: "2025-09-10",
+    topic: "Floating Point Numbers",
+    file: "CS2810/Notes/9-10-25.md"
+  },
+
+
+    {
+    course: "CS2610",
+    date: "2025-09-08",
+    topic: "Learning More Shit",
+    file: "CS2610/Notes/9-8-25.md"
+  },
+
+   {
+    course: "CS2610",
+    date: "2025-09-10",
+    topic: "Learning even more shit",
+    file: "CS2610/Notes/9-10-25.md"
+  },
+
+     {
+    course: "CS2810",
+    date: "2025-09-12",
+    topic: "Latches",
+    file: "CS2610/Notes/9-12-25.md"
+  },
+
   // Add more notes here...
 ];
 
