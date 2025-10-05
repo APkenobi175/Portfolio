@@ -2,3 +2,8 @@
 # JetBrains
 .idea/
 *.iml
+
+# Logism and zip files
+*.circ
+*.zip
+# OS files
