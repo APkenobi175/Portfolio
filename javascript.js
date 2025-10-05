@@ -93,33 +93,35 @@ const NOTES = [
     topic: "Boolean Algebra",
     file: "CS2810/Notes/8-27-25.md"
   },
-        {
+  {
     course: "CS2810",
     date: "2025-08-29",
     topic: "Logic Gates",
     file: "CS2810/Notes/8-29-25.md"
   },
 
-          {
+  {
     course: "CS2810",
     date: "2025-09-03",
     topic: "Logic Gates",
     file: "CS2810/Notes/9-3-25.md"
   },
 
-      {
+  {
     course: "CS2610",
     date: "2025-09-04",
     topic: "Ports, Sockets, Protocols, Advanced Python",
     file: "CS2610/Notes/9-4-25.md"
   },
-            {
+
+  {
     course: "CS2810",
     date: "2025-09-05",
     topic: "Boolean Arithmetic",
     file: "CS2810/Notes/9-5-25.md"
   },
-              {
+
+  {
     course: "CS2610",
     date: "2025-09-06",
     topic: "Advanced Python",
@@ -145,14 +147,14 @@ const NOTES = [
     {
     course: "CS2610",
     date: "2025-09-08",
-    topic: "Learning More Shit",
+    topic: "Frameworks - Django",
     file: "CS2610/Notes/9-8-25.md"
   },
 
    {
     course: "CS2610",
     date: "2025-09-10",
-    topic: "Learning even more shit",
+    topic: "Building Applications with Django",
     file: "CS2610/Notes/9-10-25.md"
   },
 
@@ -160,8 +162,93 @@ const NOTES = [
     course: "CS2810",
     date: "2025-09-12",
     topic: "Latches",
-    file: "CS2610/Notes/9-12-25.md"
+    file: "CS2810/Notes/9-12-25.md"
   },
+  {
+    course: "CS2810",
+    date: "2025-09-15",
+    topic: "CPU Design and Registers",
+    file: "CS2810/Notes/9-15-25.md"
+  },
+  {
+    course: "CS2810",
+    date: "2025-09-17",
+    topic: "RAM, Registers, And Counters",
+    file: "CS2810/Notes/9-17-25.md"
+  },
+  {
+    course: "CS2810",
+    date: "2025-09-22",
+    topic: "Review for Exam 1",
+    file: "CS2810/Notes/9-22-25.md"
+  },
+  {
+    course: "CS2810",
+    date: "2025-09-24",
+    topic: "Review for Exam 1 pt 2 IEEE754",
+    file: "CS2810/Notes/9-24-25.md"
+  },
+  {
+    course: "CS2810",
+    date: "2025-09-29",
+    topic: "IEEE754 more in depth",
+    file: "CS2810/Notes/9-29-25.md"
+  },
+  {
+    course: "CS2810",
+    date: "2025-10-03",
+    topic: "Introduction to MIPS Assembly",
+    file: "CS2810/Notes/10-3-25.md"
+  },
+  {
+    course: "CS2610",
+    date: "2025-09-14",
+    topic: "MSV",
+    file: "CS2610/Notes/9-14-25.md"
+  },
+  {
+    course: "CS2610",
+    date: "2025-09-19",
+    topic: "Restful Routing",
+    file: "CS2610/Notes/9-19-25.md"
+  },
+  {
+    course: "CS2610",
+    date: "2025-09-20",
+    topic: "Types of Relationships",
+    file: "CS2610/Notes/9-20-25.md"
+  },
+  {
+    course: "CS2610",
+    date: "2025-09-26",
+    topic: "Intro to SQL",
+    file: "CS2610/Notes/9-26-25.md"
+  },
+  {
+    course: "CS2610",
+    date: "2025-09-27",
+    topic: "Helpful Hints (Quiz Review)",
+    file: "CS2610/Notes/9-27-25.md"
+  },
+  {
+    course: "CS2610",
+    date: "2025-10-04",
+    topic: "Users and Authentication",
+    file: "CS2610/Notes/10-4-25.md"
+  },
+  {
+    course: "CS2610",
+    date: "2025-10-05",
+    topic: "Cookies and Session Based Authentication",
+    file: "CS2610/Notes/10-5-25.md"
+  },
+  {
+    course: "CS2610",
+    date: "2025-10-06",
+    topic: "Middleware in Django",
+    file: "CS2610/Notes/10-6-25.md"
+  },
+
 
   // Add more notes here...
 ];
