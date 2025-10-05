@@ -9,9 +9,4 @@
 
 
 # Obsidian system files
-.obsidian/
-.obsidian-workspace
-.obsidian-plugins/
-.obsidian-snippets/
-.obsidian-backup/
-.obsidian-cache/
+.obsidian
