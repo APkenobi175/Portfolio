@@ -1,0 +1,6 @@
+a = input("Enter a: ")
+b = input("Enter b: ")
+c = input("Enter c: ")
+d = int(a) - int(b) + int(c)
+print(f"{a} - {b} + {c} = {d}")
+print("What took 102 lines of code in MIPS took 5 lines in python")
