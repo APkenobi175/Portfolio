@@ -1,0 +1,58 @@
+
+body {
+  background-color: #f7f7f7;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.counter {
+  background: #fff;
+  padding: 100px 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 1000px;
+}
+
+
+.counter h1 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.count {
+  font-size: 3.5rem;
+  color: #0078d4;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+/* Buttons */
+.buttons button {
+  margin: 6px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0078d4;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #005fa3;
+}
+
+
+/* Reset button has different color */
+button.reset {
+  background-color: #e63946;
+}
+
+button.reset:hover {
+  background-color: #b71c1c;
+}
