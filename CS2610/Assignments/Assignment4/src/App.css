@@ -1,0 +1,93 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+
+.phrase {
+  font-size: 3rem;     
+  line-height: 3.8rem;
+  font-weight: 500;
+  text-align: center;
+  word-break: break-word;
+}
+
+.typed {
+  color: #111;
+}
+.underline {
+  border-bottom: 4px solid #111;
+  padding-bottom: 4px;
+}
+.remaining {
+  color: #888;
+}
+
+
+.kb {
+  display: grid;
+  gap: .6rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+.kb-row {
+  display: grid;
+  grid-auto-flow: column;
+  gap: .6rem;
+  justify-content: center;
+}
+
+
+.key {
+  min-width: 2.8rem;
+  padding: .9rem .7rem;
+  border-radius: .7rem;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0 2px 0 rgba(0,0,0,.1);
+  color: #111;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.key.space {
+  min-width: 20rem;
+  justify-self: center;
+}
+.key.shift {
+  min-width: 6rem; 
+}
+
+.key.pressed {
+  transform: translateY(2px);
+  box-shadow: none;
+  background: #f0f0f0;
+}
+
+.key.needs {
+  outline: 3px solid red;
+}
+
+.key {
+  min-width: 2.4rem;
+  padding: .65rem .55rem;
+  text-align: center;
+  border-radius: .6rem;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 0 rgba(0,0,0,.15);
+  user-select: none;
+  background: #fafafa;
+}
