@@ -10,3 +10,18 @@
 
 # Obsidian system files
 .obsidian
+
+
+# Windows binaries
+*.exe
+
+# Object files
+*.o
+*.obj
+
+# Build directories
+build/
+bin/
+
+# Debug symbols
+*.pdb
