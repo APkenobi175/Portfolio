@@ -1,0 +1,11 @@
+#include <iostream>
+
+void print(auto arg){ // auto allows us to accept any data type as an argument
+    std::cout << arg << std::endl; // std::endl adds a new line after the output
+}
+
+int main(){
+    print("Hello World");
+    print("Sup guys I turned my C++ into python");
+}
+
