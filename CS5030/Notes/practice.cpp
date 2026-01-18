@@ -15,7 +15,7 @@ int main(){
 
     // Now that we have out data structures we can start assigning iterations to cores
 
-    for(int i = n; i>=0; i--){
+    for(int i = n; i == 1; i--){
         // find core with minimum time
         int min_core = std::min_element(time.begin(), time.end()) - time.begin();
 
