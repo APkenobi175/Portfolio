@@ -134,7 +134,7 @@
 		```
 		* Variables in html
 		```
-		{{ variable }}
+		{ / { variable } / }
 		```
 	* CRSF TOken
 		* In forms a crsf token is required
