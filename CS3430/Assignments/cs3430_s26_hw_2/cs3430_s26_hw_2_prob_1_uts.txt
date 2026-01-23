@@ -1,0 +1,182 @@
+
+Running CS3430 S26 HW2 Problem 1 unit tests...
+
+
+[Test] test_01_sp_b_structural
+[INFO] Returned expression:
+       expr = 2*a*sin(theta/2)
+[INFO] expr type = <class 'sympy.core.mul.Mul'>
+[CHECK] expr is a SymPy Mul ...
+[PASS] expr is a SymPy Mul
+[CHECK] expr depends on theta ...
+[PASS] expr depends on theta
+[CHECK] expr depends on a ...
+[PASS] expr depends on a
+[INFO] sin terms found: [sin(theta/2)]
+[CHECK] exactly 1 sin term exists ...
+[PASS] exactly 1 sin term exists
+[INFO] sin argument = theta/2
+[CHECK] sin argument simplifies to theta/2 ...
+[PASS] sin argument is theta/2
+[INFO] free symbols: {a, theta}
+[CHECK] 'a' is among free symbols ...
+[PASS] 'a' is among free symbols
+[SUCCESS] test_01_sp_b_structural PASSED!!!
+
+[Test] test_02_sp_to_np_on_sp_b_numerical
+[INFO] b_expr = 2*a*sin(theta/2)
+[INFO] b_np type = <class 'function'>
+[CHECK] b_np is callable ...
+[PASS] b_np is callable
+[INFO] Testing a=1.0, theta=0.1
+       got = 9.9958338541356662e-02
+       ref = 9.9958338541356662e-02
+[INFO] Testing a=2.0, theta=0.2
+       got = 3.9933366658731262e-01
+       ref = 3.9933366658731262e-01
+[INFO] Testing a=3.5, theta=0.5
+       got = 1.7318277147816605e+00
+       ref = 1.7318277147816605e+00
+[INFO] Testing a=10.0, theta=1.0
+       got = 9.5885107720840601e+00
+       ref = 9.5885107720840601e+00
+[SUCCESS] test_02_sp_to_np_on_sp_b_numerical PASSED!!!
+
+[Test] test_03_sp_ice_cream_area_structural
+[INFO] Returned expression:
+       expr = pi*a**2*sin(theta/2)**2/2
+[INFO] expr type = <class 'sympy.core.mul.Mul'>
+[INFO] free symbols: {a, theta}
+[CHECK] expr is a SymPy Mul ...
+[PASS] expr is a SymPy Mul
+[CHECK] expr depends on theta ...
+[PASS] expr depends on theta
+[CHECK] expr depends on a ...
+[PASS] expr depends on a
+[CHECK] expr contains pi ...
+[PASS] expr contains pi
+[INFO] sin terms found: [sin(theta/2)]
+[CHECK] at least 1 sin term exists ...
+[PASS] at least 1 sin term exists
+[SUCCESS] test_03_sp_ice_cream_area_structural PASSED!!!
+
+[Test] test_04_sp_ice_cream_area_numerical
+[INFO] Returned expression:
+       expr = pi*a**2*sin(theta/2)**2/2
+[INFO] f_np type = <class 'function'>
+[CHECK] NumPy-converted function is callable ...
+[PASS] NumPy-converted function is callable
+[INFO] Testing a=1.0, theta=0.1
+       got = 3.9237194152757652e-03
+       ref = 3.9237194152757652e-03
+[INFO] Testing a=2.0, theta=0.2
+       got = 6.2622692614859296e-02
+       ref = 6.2622692614859296e-02
+[INFO] Testing a=3.5, theta=0.5
+       got = 1.1777937804742453e+00
+       ref = 1.1777937804742453e+00
+[INFO] Testing a=10.0, theta=1.0
+       got = 3.6104572468920502e+01
+       ref = 3.6104572468920502e+01
+[SUCCESS] test_04_sp_ice_cream_area_numerical PASSED!!!
+
+[Test] test_05_sp_cone_area_structural
+[INFO] Returned expression:
+       expr = a*sqrt(-4*a**2*sin(theta/2)**2 + 4*a**2)*sin(theta/2)/2
+[INFO] expr type = <class 'sympy.core.mul.Mul'>
+[INFO] free symbols: {a, theta}
+[CHECK] expr depends on theta ...
+[PASS] expr depends on theta
+[CHECK] expr depends on a ...
+[PASS] expr depends on a
+[INFO] Pow terms found: [sqrt(-4*a**2*sin(theta/2)**2 + 4*a**2), sin(theta/2)**2, a**2]
+[INFO] sqrt-like terms (Pow with exp=1/2): [sqrt(-4*a**2*sin(theta/2)**2 + 4*a**2)]
+[CHECK] at least 1 sqrt-like Pow term exists ...
+[PASS] at least 1 sqrt-like Pow term exists
+[INFO] sin terms found: [sin(theta/2)]
+[CHECK] at least 1 sin term exists ...
+[PASS] at least 1 sin term exists
+[CHECK] sin argument includes theta/2 ...
+[PASS] sin argument includes theta/2
+[SUCCESS] test_05_sp_cone_area_structural PASSED!!!
+
+[Test] test_06_sp_cone_area_numerical
+[INFO] Returned expression:
+       expr = a*sqrt(-4*a**2*sin(theta/2)**2 + 4*a**2)*sin(theta/2)/2
+[INFO] f_np type = <class 'function'>
+[CHECK] NumPy-converted function is callable ...
+[PASS] NumPy-converted function is callable
+[INFO] Testing a=1.0, theta=0.1
+       got = 4.9916708323414077e-02
+       ref = 4.9916708323414077e-02
+[INFO] Testing a=2.0, theta=0.2
+       got = 3.9733866159012243e-01
+       ref = 3.9733866159012243e-01
+[INFO] Testing a=3.5, theta=0.5
+       got = 2.9364814239507431e+00
+       ref = 2.9364814239507435e+00
+[INFO] Testing a=10.0, theta=1.0
+       got = 4.2073549240394826e+01
+       ref = 4.2073549240394826e+01
+[SUCCESS] test_06_sp_cone_area_numerical PASSED!!!
+
+[Test] test_07_sp_ice_cream_rat_structural
+[INFO] Returned expression:
+       expr = pi*a*sin(theta/2)/sqrt(-4*a**2*sin(theta/2)**2 + 4*a**2)
+[INFO] expr type = <class 'sympy.core.mul.Mul'>
+[INFO] free symbols: {a, theta}
+[CHECK] expr depends on theta ...
+[PASS] expr depends on theta
+[CHECK] expr depends on a ...
+[PASS] expr depends on a
+[CHECK] expr contains pi ...
+[PASS] expr contains pi
+[INFO] sin terms found: [sin(theta/2)]
+[CHECK] at least 1 sin term exists ...
+[PASS] at least 1 sin term exists
+[CHECK] sin argument includes theta/2 ...
+[PASS] sin argument includes theta/2
+[INFO] Pow terms found: [a**2, sin(theta/2)**2, 1/sqrt(-4*a**2*sin(theta/2)**2 + 4*a**2)]
+[INFO] inverse-like Pow terms (exp < 0): [1/sqrt(-4*a**2*sin(theta/2)**2 + 4*a**2)]
+[CHECK] at least 1 inverse-like Pow term exists ...
+[PASS] at least 1 inverse-like Pow term exists
+[SUCCESS] test_07_sp_ice_cream_rat_structural PASSED!!!
+
+[Test] test_08_sp_ice_cream_rat_numerical
+[INFO] Returned expression:
+       expr = pi*a*sin(theta/2)/sqrt(-4*a**2*sin(theta/2)**2 + 4*a**2)
+[INFO] f_np type = <class 'function'>
+[CHECK] NumPy-converted function is callable ...
+[PASS] NumPy-converted function is callable
+[INFO] Testing a=1.0, theta=0.1
+       got = 7.8605331702837747e-02
+       ref = 7.8605331702837747e-02
+[INFO] Testing a=2.0, theta=0.2
+       got = 1.5760533436199617e-01
+       ref = 1.5760533436199620e-01
+[INFO] Testing a=3.5, theta=0.5
+       got = 4.0109015193075565e-01
+       ref = 4.0109015193075565e-01
+[INFO] Testing a=10.0, theta=1.0
+       got = 8.5812994436553236e-01
+       ref = 8.5812994436553247e-01
+[SUCCESS] test_08_sp_ice_cream_rat_numerical PASSED!!!
+
+[Test] test_09_sp_ice_cream_rat_limit_structural
+[INFO] Returned expression:
+       expr = 0
+[INFO] expr type = <class 'sympy.core.numbers.Zero'>
+[CHECK] limit expression equals 0 ...
+[PASS] limit expression equals 0
+[SUCCESS] test_09_sp_ice_cream_rat_limit_structural PASSED!!!
+
+[Test] test_10_sp_ice_cream_rat_limit_numerical
+[INFO] rat_expr = pi*a*sin(theta/2)/sqrt(-4*a**2*sin(theta/2)**2 + 4*a**2)
+[INFO] L_raw = 0
+[INFO] simplify(rat_expr) = pi*sin(theta/2)/(2*Abs(cos(theta/2)))
+[INFO] L_simp = 0
+[CHECK] L_raw equals 0 ...
+[PASS] L_raw equals 0
+[CHECK] L_simp equals 0 ...
+[PASS] L_simp equals 0
+[SUCCESS] test_10_sp_ice_cream_rat_limit_numerical PASSED!!!

@@ -1,0 +1,237 @@
+
+Running CS3430 S26 HW2 Problem 2 unit tests...
+
+
+[Test] test_01_sp_laminar_velocity_structural
+[INFO] Returned expression:
+       expr = P*(R**2 - r**2)/(4*eta*l)
+[INFO] expr type = <class 'sympy.core.mul.Mul'>
+[INFO] free symbols: {r, P, eta, R, l}
+[CHECK] expr is a SymPy expression (sp.Expr) ...
+[PASS] expr is a SymPy expression
+[CHECK] expr depends on r ...
+[PASS] expr depends on r
+[CHECK] expr depends on R ...
+[PASS] expr depends on R
+[CHECK] expr depends on P ...
+[PASS] expr depends on P
+[CHECK] expr depends on eta ...
+[PASS] expr depends on eta
+[CHECK] expr depends on l ...
+[PASS] expr depends on l
+[INFO] Pow terms found: [1/l, r**2, R**2, 1/eta]
+[CHECK] expr contains r^2 ...
+[PASS] expr contains r^2
+[SUCCESS] test_01_sp_laminar_velocity_structural PASSED!!!
+
+[Test] test_02_sp_laminar_velocity_numerical
+[INFO] Returned expression:
+       expr = P*(R**2 - r**2)/(4*eta*l)
+[INFO] f_np type = <class 'function'>
+[CHECK] NumPy-converted function is callable ...
+[PASS] NumPy-converted function is callable
+[INFO] Testing r=0.0, R=2.0, P=100.0, eta=4.0, l=10.0
+       got = 2.5000000000000000e+00
+       ref = 2.5000000000000000e+00
+[CHECK] velocity at r=R is approximately 0 ...
+       v(R) = 0.0
+[PASS] velocity at r=R is approximately 0
+[INFO] Testing r=0.5, R=2.0, P=100.0, eta=4.0, l=10.0
+       got = 2.3437500000000000e+00
+       ref = 2.3437500000000000e+00
+[CHECK] velocity at r=R is approximately 0 ...
+       v(R) = 0.0
+[PASS] velocity at r=R is approximately 0
+[INFO] Testing r=1.0, R=2.0, P=100.0, eta=4.0, l=10.0
+       got = 1.8750000000000000e+00
+       ref = 1.8750000000000000e+00
+[CHECK] velocity at r=R is approximately 0 ...
+       v(R) = 0.0
+[PASS] velocity at r=R is approximately 0
+[INFO] Testing r=2.0, R=2.0, P=100.0, eta=4.0, l=10.0
+       got = 0.0000000000000000e+00
+       ref = 0.0000000000000000e+00
+[CHECK] velocity at r=R is approximately 0 ...
+       v(R) = 0.0
+[PASS] velocity at r=R is approximately 0
+[SUCCESS] test_02_sp_laminar_velocity_numerical PASSED!!!
+
+[Test] test_03_sp_avg_rate_of_change_structural
+[INFO] Returned expression:
+       expr = (-P*(R**2 - r1**2)/(4*eta*l) + P*(R**2 - r2**2)/(4*eta*l))/(-r1 + r2)
+[INFO] expr type = <class 'sympy.core.mul.Mul'>
+[INFO] free symbols: {P, eta, r1, R, l, r2}
+[CHECK] expr is a SymPy expression (sp.Expr) ...
+[PASS] expr is a SymPy expression
+[CHECK] expr depends on r1 ...
+[PASS] expr depends on r1
+[CHECK] expr depends on r2 ...
+[PASS] expr depends on r2
+[CHECK] expr depends on R ...
+[PASS] expr depends on R
+[CHECK] expr depends on P ...
+[PASS] expr depends on P
+[CHECK] expr depends on eta ...
+[PASS] expr depends on eta
+[CHECK] expr depends on l ...
+[PASS] expr depends on l
+[INFO] Pow terms found: [1/eta, 1/(-r1 + r2), R**2, r1**2, 1/l, r2**2]
+[INFO] inverse-like Pow terms (exp < 0): [1/eta, 1/(-r1 + r2), 1/l]
+[CHECK] at least 1 inverse-like Pow term exists ...
+[PASS] at least 1 inverse-like Pow term exists
+[INFO] simplify(expr) = P*(-r1 - r2)/(4*eta*l)
+[SUCCESS] test_03_sp_avg_rate_of_change_structural PASSED!!!
+
+[Test] test_04_sp_avg_rate_of_change_numerical
+[INFO] Returned expression:
+       expr = (-P*(R**2 - r1**2)/(4*eta*l) + P*(R**2 - r2**2)/(4*eta*l))/(-r1 + r2)
+[INFO] f_np type = <class 'function'>
+[CHECK] NumPy-converted function is callable ...
+[PASS] NumPy-converted function is callable
+[INFO] Testing r1=0.0, r2=0.5, R=2.0, P=100.0, eta=4.0, l=10.0
+       got = -3.1250000000000000e-01
+       ref = -3.1250000000000000e-01
+[INFO] Testing r1=0.5, r2=1.0, R=2.0, P=100.0, eta=4.0, l=10.0
+       got = -9.3750000000000000e-01
+       ref = -9.3750000000000000e-01
+[INFO] Testing r1=0.0, r2=1.0, R=2.0, P=100.0, eta=4.0, l=10.0
+       got = -6.2500000000000000e-01
+       ref = -6.2500000000000000e-01
+[INFO] Testing r1=1.0, r2=2.0, R=2.0, P=100.0, eta=4.0, l=10.0
+       got = -1.8750000000000000e+00
+       ref = -1.8750000000000000e+00
+[SUCCESS] test_04_sp_avg_rate_of_change_numerical PASSED!!!
+
+[Test] test_05_sp_velocity_gradient_structural
+[INFO] Returned expression:
+       expr = -P*r/(2*eta*l)
+[INFO] expr type = <class 'sympy.core.mul.Mul'>
+[INFO] free symbols: {P, eta, r, l}
+[CHECK] expr is a SymPy expression (sp.Expr) ...
+[PASS] expr is a SymPy expression
+[CHECK] expr depends on r ...
+[PASS] expr depends on r
+[CHECK] expr depends on P ...
+[PASS] expr depends on P
+[CHECK] expr depends on eta ...
+[PASS] expr depends on eta
+[CHECK] expr depends on l ...
+[PASS] expr depends on l
+[CHECK] expr does NOT depend on R ...
+[PASS] expr does NOT depend on R
+[INFO] simplify(expr) = -P*r/(2*eta*l)
+[CHECK] simplified expr contains r ...
+[PASS] simplified expr contains r
+[SUCCESS] test_05_sp_velocity_gradient_structural PASSED!!!
+
+[Test] test_06_sp_velocity_gradient_numerical
+[INFO] Returned expression:
+       expr = -P*r/(2*eta*l)
+[INFO] f_np type = <class 'function'>
+[CHECK] NumPy-converted function is callable ...
+[PASS] NumPy-converted function is callable
+[INFO] Testing r=0.0, R=2.0, P=100.0, eta=4.0, l=10.0
+       got = -0.0000000000000000e+00
+       ref = -0.0000000000000000e+00
+[INFO] Testing r=0.5, R=2.0, P=100.0, eta=4.0, l=10.0
+       got = -6.2500000000000000e-01
+       ref = -6.2500000000000000e-01
+[INFO] Testing r=1.0, R=2.0, P=100.0, eta=4.0, l=10.0
+       got = -1.2500000000000000e+00
+       ref = -1.2500000000000000e+00
+[INFO] Testing r=1.5, R=2.0, P=100.0, eta=4.0, l=10.0
+       got = -1.8750000000000000e+00
+       ref = -1.8750000000000000e+00
+[SUCCESS] test_06_sp_velocity_gradient_numerical PASSED!!!
+
+[Test] test_07_sp_velocity_gradient_closed_form_structural
+[INFO] Returned expression:
+       expr = -P*r/(2*eta*l)
+[INFO] expr type = <class 'sympy.core.mul.Mul'>
+[INFO] free symbols: {P, eta, r, l}
+[CHECK] expr is a SymPy expression (sp.Expr) ...
+[PASS] expr is a SymPy expression
+[CHECK] expr depends on r ...
+[PASS] expr depends on r
+[CHECK] expr depends on P ...
+[PASS] expr depends on P
+[CHECK] expr depends on eta ...
+[PASS] expr depends on eta
+[CHECK] expr depends on l ...
+[PASS] expr depends on l
+[INFO] simplify(expr) = -P*r/(2*eta*l)
+[CHECK] simplified expr contains r ...
+[PASS] simplified expr contains r
+[SUCCESS] test_07_sp_velocity_gradient_closed_form_structural PASSED!!!
+
+[Test] test_08_sp_velocity_gradient_closed_form_numerical
+[INFO] expr_closed = -P*r/(2*eta*l)
+[INFO] expr_diff   = -P*r/(2*eta*l)
+[CHECK] closed-form NumPy function is callable ...
+[PASS] closed-form NumPy function is callable
+[CHECK] diff-based NumPy function is callable ...
+[PASS] diff-based NumPy function is callable
+[INFO] Testing r=0.0, R=2.0, P=100.0, eta=4.0, l=10.0
+       got_closed = -0.0000000000000000e+00
+       got_diff   = -0.0000000000000000e+00
+       ref        = -0.0000000000000000e+00
+[INFO] Testing r=0.5, R=2.0, P=100.0, eta=4.0, l=10.0
+       got_closed = -6.2500000000000000e-01
+       got_diff   = -6.2500000000000000e-01
+       ref        = -6.2500000000000000e-01
+[INFO] Testing r=1.0, R=2.0, P=100.0, eta=4.0, l=10.0
+       got_closed = -1.2500000000000000e+00
+       got_diff   = -1.2500000000000000e+00
+       ref        = -1.2500000000000000e+00
+[INFO] Testing r=1.5, R=2.0, P=100.0, eta=4.0, l=10.0
+       got_closed = -1.8750000000000000e+00
+       got_diff   = -1.8750000000000000e+00
+       ref        = -1.8750000000000000e+00
+[SUCCESS] test_08_sp_velocity_gradient_closed_form_numerical PASSED!!!
+
+[Test] test_09_sp_flow_rate_Q_structural
+[INFO] Returned expression:
+       expr = pi*P*R**4/(8*eta*l)
+[INFO] expr type = <class 'sympy.core.mul.Mul'>
+[INFO] free symbols: {P, eta, R, l}
+[CHECK] expr is a SymPy expression (sp.Expr) ...
+[PASS] expr is a SymPy expression
+[CHECK] expr depends on R ...
+[PASS] expr depends on R
+[CHECK] expr depends on P ...
+[PASS] expr depends on P
+[CHECK] expr depends on eta ...
+[PASS] expr depends on eta
+[CHECK] expr depends on l ...
+[PASS] expr depends on l
+[CHECK] expr contains pi ...
+[PASS] expr contains pi
+[INFO] Pow terms found: [1/l, 1/eta, R**4]
+[CHECK] expr contains R^4 ...
+[PASS] expr contains R^4
+[SUCCESS] test_09_sp_flow_rate_Q_structural PASSED!!!
+
+[Test] test_10_sp_flow_rate_Q_numerical
+[INFO] Returned expression:
+       expr = pi*P*R**4/(8*eta*l)
+[INFO] f_np type = <class 'function'>
+[CHECK] NumPy-converted function is callable ...
+[PASS] NumPy-converted function is callable
+[INFO] Testing R=1.0, P=100.0, eta=4.0, l=10.0
+       got = 9.8174770424681035e-01
+       ref = 9.8174770424681035e-01
+[INFO] Testing R=2.0, P=100.0, eta=4.0, l=10.0
+       got = 1.5707963267948966e+01
+       ref = 1.5707963267948966e+01
+[INFO] Testing R=1.5, P=200.0, eta=3.0, l=8.0
+       got = 1.6566992509164926e+01
+       ref = 1.6566992509164926e+01
+[INFO] Testing R=0.5, P=150.0, eta=5.0, l=12.0
+       got = 6.1359231515425647e-02
+       ref = 6.1359231515425647e-02
+[CHECK] Doubling R multiplies Q by ~16 ...
+       Q(R=1) = 0.9817477042468103
+       Q(R=2) = 15.707963267948966
+       Q(R=2)/Q(R=1) = 16.0
+[PASS] Doubling R multiplies Q by ~16
+[SUCCESS] test_10_sp_flow_rate_Q_numerical PASSED!!!
