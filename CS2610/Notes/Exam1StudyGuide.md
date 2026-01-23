@@ -130,7 +130,7 @@
 		```
 		* and
 		```
-		<link rel = "stylesheet" href="{% static 'core/style.css' %}"
+		<link rel = "stylesheet" href="{ / % static 'core/style.css' % / }"
 		```
 		* Variables in html
 		```
