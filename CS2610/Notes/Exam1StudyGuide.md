@@ -116,7 +116,7 @@
 			* Starts an HTTP server for your application
 		6. Please see above notes on how to properly start a Django project (or check 9-8-25.md)
 	* Django Template Syntax
-		* {% %} and such
+		* { / %        % / } and such
 	* Configuring App
 		* See above notes, and also add your app to INSTALLED_APPS in settings.py
 		* Don't forget to add the URLS like this:
@@ -126,7 +126,7 @@
 		```
 		* To load your static files do this at the beginning of your html
 		```
-		{% Load Static %}
+		{ / % Load Static % / }
 		```
 		* and
 		```
