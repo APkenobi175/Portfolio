@@ -220,16 +220,16 @@ class nra(object):
             # with the current numeric value xi.
             # I assume you will save this in fxi
             
-            fxi = f.subs(x, xi)
+            fxi = f.subs(x, xi) # fxi using substitution
 
             # 2) Evaluate f'(x) at the current guess xi, also using substitution.
             # I assume you will save this in dfxi
             
-            dfxi = df.subs(x, xi)
+            dfxi = df.subs(x, xi) # dfxi using substitution
 
             # 3) Convert the derivative value to a Python float so we can run a
             # numerical near-zero check. (np.isclose expects numeric values.)
-            dfxi_f = float(dfxi)
+            dfxi_f = float(dfxi) 
 
             # 4) If the derivative is 0 (or extremely close to 0), then the Newton
             # update would require division by ~0, which is numerically unstable.

@@ -1,0 +1,34 @@
+$ python cs3430_s26_hw_5_prob_2_uts.py 
+test_leibniz_vs_machin_convergence (__main__.TestConvergence) ... 
+[CONVERGENCE TEST] Leibniz vs Machin
+  Leibniz after 2000 terms:
+    approx = 3.1410926536210432286970258295579986968615976706526522734076
+    |error| = 0.000499999968750009765617553721504187335571728722453547567341501
+
+  Machin after 10 terms:
+    approx = 3.14159265358979169691727961962010544814065198293260396388959
+    |error| = 0.00000000000000154154536376365939743605651741644250185708535470623988889841
+
+  -> Machin converges far faster than Leibniz
+
+ok
+test_generators_yield_multiple_values (__main__.TestStructure) ... [STRUCTURE TEST] Verifying generators yield values
+  Leibniz first 3 approximations: [mpf('4.0'), mpf('2.66666666666666666666666666666666666666666666666666666666666687'), mpf('3.466666666666666666666666666666666666666666666666666666666667')]
+  Machin  first 3 approximations: [mpf('3.18326359832635983263598326359832635983263598326359832635983254'), mpf('3.14059702932606031430453110657922889814977659917261448738452083'), mpf('3.14162102932503442504683251711640806970624461821343055486063937')]
+  -> Both generators yield multiple values
+
+ok
+test_required_callables_exist (__main__.TestStructure) ... 
+[STRUCTURE TEST] Checking required generators
+  - pi_leibniz_mp: FOUND and callable
+  - pi_machin_mp:  FOUND and callable
+  -> Structural requirements satisfied
+
+ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.039s
+
+OK
+
+!!! All HW5 Problem 2 unit tests passed !!!

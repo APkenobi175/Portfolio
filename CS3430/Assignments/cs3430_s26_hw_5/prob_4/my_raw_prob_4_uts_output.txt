@@ -1,0 +1,46 @@
+$ python cs3430_s26_hw_5_prob_4_uts.py 
+test_hash_matches_until_failure (__main__.TestChudnovskyDeepConvergence) ... 
+[DEEP CONVERGENCE TEST] Chudnovsky (binary splitting)
+------------------------------------------------------
+  digits    terms     mp.dps hash match
+------------------------------------------------------
+     200       15        250        True
+     500       40        550       False
+
+!!! FIRST HASH MISMATCH DETECTED !!!
+    n_digits = 500
+    terms    = 40
+    mp.dps   = 550
+    Interpretation:
+      - Chudnovsky series still converges numerically
+      - mp.dps is insufficient for full mantissa correctness
+
+[DEEP CONVERGENCE TEST COMPLETED]
+ok
+test_chudnovsky_produces_correct_prefix (__main__.TestChudnovskyIntegration)
+Verify that the binary-splitting Chudnovsky generator produces ... [INTEGRATION TEST] Chudnovsky (binary splitting)
+  terms    = 3
+  mp.dps   = 120
+  digits   = 40
+  BS digits : 1415926535897932384626433832795028841971
+  Ref digits: 1415926535897932384626433832795028841971
+ok
+test_hash_determinism (__main__.TestProblem4Utilities)
+Hashing the same digit string twice must produce the same digest. ... [HASH TEST] Digest: d181c4d9093f8db365da24c5d594cf6f128684960addfe7fc3a5366b68e9bb85
+ok
+test_hash_sensitivity (__main__.TestProblem4Utilities)
+A one-digit change must produce a different hash. ... [HASH TEST] h1 = d181c4d9093f8db365da24c5d594cf6f128684960addfe7fc3a5366b68e9bb85
+[HASH TEST] h2 = 75023af888b5bfe5e142a29a34171cf33f26aa06e6427560ad4759b668761bad
+ok
+test_mantissa_extraction_basic (__main__.TestProblem4Utilities)
+Verify that pi_mantissa_from_mpf extracts the correct digits. ... [UTILITY TEST] Extracted mantissa: 14159265358979323846264338327950288419716939937510
+ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.009s
+
+OK
+
+!!! All HW5 Problem 4 unit tests passed !!!
+
+

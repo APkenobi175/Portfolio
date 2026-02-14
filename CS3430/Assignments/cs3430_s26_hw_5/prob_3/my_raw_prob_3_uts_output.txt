@@ -1,0 +1,49 @@
+$ python cs3430_s26_hw_5_prob_3_uts.py 
+test_chudnovsky_bs_converges_even_faster (__main__.TestConvergence) ... 
+[CONVERGENCE TEST] Chudnovsky (binary splitting) convergence
+  term_count=1:
+    approx = 3.14159265358973420766845359158
+    |err|  = 5.903079419e-14
+  term_count=2:
+    approx = 3.14159265358979323846264338359
+    |err|  = 3.078478043e-28
+  term_count=3:
+    approx = 3.14159265358979323846264338328
+    |err|  = 1.72052026e-42
+  -> Chudnovsky(BS) converges explosively fast
+
+ok
+test_ramanujan_converges_fast (__main__.TestConvergence) ... 
+[CONVERGENCE TEST] Ramanujan series convergence
+  term_count=1:
+    approx = 3.14159273001330566031399618903
+    |err|  = 7.642351242e-8
+  term_count=2:
+    approx = 3.14159265358979387799890582631
+    |err|  = 6.395362624e-16
+  term_count=3:
+    approx = 3.1415926535897932384626490657
+    |err|  = 5.682423256e-24
+  -> Ramanujan converges extremely fast
+
+ok
+test_generators_yield_multiple_values (__main__.TestStructure) ... [STRUCTURE TEST] Verifying generators yield multiple values
+  Ramanujan first 3 approximations: [mpf('3.1415927300133056603139961890252155185995816071100335596565362901285514554413216365'), mpf('3.1415926535897938779989058263060130942166450293228488791739637915057844006485116719'), mpf('3.141592653589793238462649065702758898156677480462334781168399595644739794558841582')]
+  Chudnovsky(BS) first 3 approximations: [mpf('3.1415926535897342076684535915782983407622332609157065908941454987376662094016591081'), mpf('3.1415926535897932384626433835873506884758663459963743156549058068013014505652035903'), mpf('3.141592653589793238462643383279502884197167678854846287912727790370642977335176957')]
+  -> Both generators yield multiple values
+
+ok
+test_required_callables_exist (__main__.TestStructure) ... 
+[STRUCTURE TEST] Checking required generators for Problem 3
+  - pi_ramanujan_mp: FOUND and callable
+  - pi_chudnovsky_bs_mp: FOUND and callable
+  -> Structural requirements satisfied
+
+ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK
+
+!!! All HW5 Problem 3 unit tests passed !!!
