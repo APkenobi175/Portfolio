@@ -1,0 +1,42 @@
+
+ChiSq 4sym uniform-like -> chi^2=0.0, p=1.0
+!!! test_chi_square_4symbol_uniform_like passed
+
+Rejection rates (slice): {'monobit': 0.5, 'block': 0.5, 'chi4': 0.0}
+Saved plot: /home/atklabhp/kulyukin/teaching/CS3430/S26/hw/hw_6/cs3430_s26_hw_6_sol/hw6_prob2_slice_pvalues.png
+!!! test_end_to_end_slice_and_plot_png passed
+Saved full genome p-value plots.
+!!! test_full_genome_plots_if_file_present passed
+
+=== FULL GENOME REJECTION SUMMARY TABLE ===
+Sliding Window Rejection Summary
+Window size = 500, Total windows = 322
+
+Test Type        | Rejections | Rate
+---------------------------------------
+Monobit (GC/AT)  |        215 | 0.668
+Block Frequency  |        143 | 0.444
+Chi^2 (A,C,G,T)  |        322 | 1.000
+---------------------------------------
+============================================
+
+!!! test_full_genome_rejection_table_if_file_present passed
+
+Full genome length: 16569
+
+=== FULL GENOME REJECTION RATES ===
+Window size = 500, step = 50, alpha = 0.05
+Total windows: 322
+Rejection rates: {'monobit': 0.6677018633540373, 'block': 0.4440993788819876, 'chi4': 1.0}
+====================================
+
+!!! test_full_genome_sliding_window_rejections_if_file_present passed
+
+Monobit extremes -> z=14.14213562373095, p=2.0884875837625446e-45
+!!! test_monobit_extremes passed
+Diagnostic bits: [0, 1, 1, 0, 0, 1, 1, 0]
+Diagnostic vals: [1, 2, 3, 4, 1, 2, 3, 4]
+!!! test_encoders_contract passed
+!!! test_required_symbols_exist passed
+Diagnostic windows count: 7
+!!! test_sliding_window_contract passed

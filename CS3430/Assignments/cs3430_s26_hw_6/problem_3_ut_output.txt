@@ -1,0 +1,67 @@
+
+START: test_checkerboard_image
+Checkerboard result:
+ImageRandomnessResult(n_pixels=10000, chi256_p_value=0.0, monobit_p_value=1.0, block_p_value=1.0, chi256_reject=True, monobit_reject=False, block_reject=False)
+Saved: checkerboard_100x100.png
+PASS !!! test_checkerboard_image
+
+START: test_checkerboard_image_misaligned_blocks
+Checkerboard (misaligned blocks) result:
+ImageRandomnessResult(n_pixels=10000, chi256_p_value=0.0, monobit_p_value=1.0, block_p_value=1.0, chi256_reject=True, monobit_reject=False, block_reject=False)
+PASS !!! test_checkerboard_image_misaligned_blocks
+
+START: test_constant_image_rejects_everything
+Constant image result:
+ImageRandomnessResult(n_pixels=10000, chi256_p_value=0.0, monobit_p_value=0.0, block_p_value=0.0, chi256_reject=True, monobit_reject=True, block_reject=True)
+Saved: constant_image.png
+PASS !!! test_constant_image_rejects_everything
+
+START: test_half_black_half_white_structure
+Half-black/half-white result:
+ImageRandomnessResult(n_pixels=10000, chi256_p_value=0.0, monobit_p_value=1.0, block_p_value=0.0, chi256_reject=True, monobit_reject=False, block_reject=True)
+Saved: half_black_half_white.png
+PASS !!! test_half_black_half_white_structure
+
+=== RANDOM IMAGE TEST ===
+ImageRandomnessResult(n_pixels=10000, chi256_p_value=0.9447078914391163, monobit_p_value=0.447254584875199, block_p_value=0.36592088038017795, chi256_reject=False, monobit_reject=False, block_reject=False)
+!!! test_random_image_end_to_end passed
+
+=== REAL IMAGE RANDOMNESS TABLE ===
+Image                | Pixels | Chi256 p | Monobit p | Block p | Chi256 Reject | Mono Reject | Block Reject
+---------------------------------------------------------------------------------------------
+road_2_blurred.png   |  86400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+nt_01.jpg            |  30000 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+road_1_deblurred.png |  86400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+hive_1_deblurred.png | 345600 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+road_3_blurred.png   |  86400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+BirdOrnament_blurred.png |  36400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+Elephant_blurred.png | 403782 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+road_4_blurred.png   |  86400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+road_4_deblurred.png |  86400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+june_blurred.png     |  30200 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+sudoku.jpg           | 442368 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+road_2.png           |  86400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+BirdOrnament_deblurred.png |  36400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+nt_01_deblurred.png  |  30000 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+Elephant.jpg         | 403782 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+june.jpg             |  30200 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+road_2_deblurred.png |  86400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+road_3.png           |  86400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+hive_1_blurred.png   | 345600 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+sudoku_blurred.png   | 442368 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+june_deblurred.png   |  30200 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+road_3_deblurred.png |  86400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+road_1.png           |  86400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+nt_01_blurred.png    |  30000 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+hive_1.png           | 345600 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+sudoku_deblurred.png | 442368 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+Elephant_deblurred.png | 403782 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+road_1_blurred.png   |  86400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+road_4.png           |  86400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+BirdOrnament.jpg     |  36400 |    0.0000 |    0.0000 |   0.0000 | True          | True        | True        
+====================================
+
+!!! test_real_images_if_present passed
+!!! test_uniform_256_balanced passed
+!!! test_random_image_reproducible passed
+!!! test_required_symbols_exist passed
