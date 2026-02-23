@@ -1,0 +1,46 @@
+[Test] Hive 103 CSV consistency check...
+[Test] Hive 103 CSV consistency passed.
+[Test] Hive 104 CSV consistency check...
+[Test] Hive 104 CSV consistency passed.
+[Test] Hive 82 CSV consistency check...
+[Test] Hive 82 CSV consistency passed.
+[Test] Hive 83 CSV consistency check...
+[Test] Hive 83 CSV consistency passed.
+[Test] Hive 84 CSV consistency check...
+[Test] Hive 84 CSV consistency passed.
+[Test] Hive 87 CSV consistency check...
+[Test] Hive 87 CSV consistency passed.
+[Test] Hive 90 CSV consistency check...
+[Test] Hive 90 CSV consistency passed.
+[Test] Hive 94 CSV consistency check...
+[Test] Hive 94 CSV consistency passed.
+[Test] Hive 97 CSV consistency check...
+[Test] Hive 97 CSV consistency passed.
+[Test] Hive 99 CSV consistency check...
+[Test] Hive 99 CSV consistency passed.
+
+[Setup] Creating temporary CSV file for testing.
+[Teardown] Removing temporary CSV file.
+
+[Setup] Creating temporary CSV file for testing.
+[Test] Display table...
+{(103, 'East'): {'temp': ([datetime.datetime(2019, 11, 26, 11, 0), datetime.datetime(2019, 11, 26, 12, 0), datetime.datetime(2019, 11, 26, 13, 0), datetime.datetime(2019, 11, 26, 14, 0), datetime.datetime(2019, 11, 26, 15, 0), datetime.datetime(2019, 12, 3, 0, 0), datetime.datetime(2019, 12, 3, 1, 0), datetime.datetime(2019, 12, 3, 2, 0), datetime.datetime(2019, 12, 3, 3, 0), datetime.datetime(2019, 12, 3, 4, 0)], array([18.485 , 22.364 , 20.708 , 26.617 , 27.054 , 34.326 , 34.1075,
+       34.326 , 34.357 , 34.295 ])), 'weight': ([datetime.datetime(2019, 12, 3, 0, 0), datetime.datetime(2019, 12, 3, 1, 0), datetime.datetime(2019, 12, 3, 2, 0), datetime.datetime(2019, 12, 3, 3, 0), datetime.datetime(2019, 12, 3, 4, 0)], array([24.7379046 , 24.74372436, 24.74947137, 24.75514564, 24.76223847]))}}
+[Teardown] Removing temporary CSV file.
+
+[Setup] Creating temporary CSV file for testing.
+[Test] Checking key creation...
+Keys found: [(103, 'East')]
+[Teardown] Removing temporary CSV file.
+
+[Setup] Creating temporary CSV file for testing.
+[Test] Checking handling of missing weight values...
+Temperature length: 10
+Weight length: 5
+[Teardown] Removing temporary CSV file.
+
+[Setup] Creating temporary CSV file for testing.
+[Test] Checking Timestamps and NumPy array types...
+Type of time array: <class 'list'>
+Type of value array: <class 'numpy.ndarray'>
+[Teardown] Removing temporary CSV file.

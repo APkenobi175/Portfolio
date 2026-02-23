@@ -1,0 +1,370 @@
+
+[Test] Running autocorrelation analysis for Hive 103
+
+=== AUTOCORRELATION TABLE ===
+Hive: 103 | Direction: East | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | raw        |   0.9948 |   0.0000 | False
+  2 | raw        |   0.9835 |   0.0000 | False
+  3 | raw        |   0.9684 |   0.0000 | False
+ 24 | raw        |   0.9376 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 103 | Direction: East | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | global     |   0.9948 |   0.0000 | False
+  2 | global     |   0.9835 |   0.0000 | False
+  3 | global     |   0.9684 |   0.0000 | False
+ 24 | global     |   0.9376 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 103 | Direction: East | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | diurnal    |   0.9955 |   0.0000 | False
+  2 | diurnal    |   0.9862 |   0.0000 | False
+  3 | diurnal    |   0.9741 |   0.0000 | False
+ 24 | diurnal    |   0.9367 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 103 | Direction: East | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | raw        |   0.9998 |   0.0000 | False
+  2 | raw        |   0.9994 |   0.0000 | False
+  3 | raw        |   0.9991 |   0.0000 | False
+ 24 | raw        |   0.9925 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 103 | Direction: East | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | global     |   0.9998 |   0.0000 | False
+  2 | global     |   0.9994 |   0.0000 | False
+  3 | global     |   0.9991 |   0.0000 | False
+ 24 | global     |   0.9925 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 103 | Direction: East | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | diurnal    |   0.9998 |   0.0000 | False
+  2 | diurnal    |   0.9994 |   0.0000 | False
+  3 | diurnal    |   0.9991 |   0.0000 | False
+ 24 | diurnal    |   0.9925 |   0.0000 | False
+----------------------------------------------------------
+
+[Test] Running autocorrelation analysis for Hive 82
+
+=== AUTOCORRELATION TABLE ===
+Hive: 82 | Direction: East | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | raw        |   0.9983 |   0.0000 | False
+  2 | raw        |   0.9952 |   0.0000 | False
+  3 | raw        |   0.9913 |   0.0000 | False
+ 24 | raw        |   0.9488 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 82 | Direction: East | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | global     |   0.9983 |   0.0000 | False
+  2 | global     |   0.9952 |   0.0000 | False
+  3 | global     |   0.9913 |   0.0000 | False
+ 24 | global     |   0.9488 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 82 | Direction: East | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | diurnal    |   0.9984 |   0.0000 | False
+  2 | diurnal    |   0.9958 |   0.0000 | False
+  3 | diurnal    |   0.9925 |   0.0000 | False
+ 24 | diurnal    |   0.9486 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 82 | Direction: East | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | raw        |   0.9997 |   0.0000 | False
+  2 | raw        |   0.9993 |   0.0000 | False
+  3 | raw        |   0.9990 |   0.0000 | False
+ 24 | raw        |   0.9916 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 82 | Direction: East | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | global     |   0.9997 |   0.0000 | False
+  2 | global     |   0.9993 |   0.0000 | False
+  3 | global     |   0.9990 |   0.0000 | False
+ 24 | global     |   0.9916 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 82 | Direction: East | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | diurnal    |   0.9997 |   0.0000 | False
+  2 | diurnal    |   0.9994 |   0.0000 | False
+  3 | diurnal    |   0.9990 |   0.0000 | False
+ 24 | diurnal    |   0.9916 |   0.0000 | False
+----------------------------------------------------------
+
+[Test] Running autocorrelation analysis for Hive 87
+
+=== AUTOCORRELATION TABLE ===
+Hive: 87 | Direction: North | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | raw        |   0.9971 |   0.0000 | False
+  2 | raw        |   0.9908 |   0.0000 | False
+  3 | raw        |   0.9826 |   0.0000 | False
+ 24 | raw        |   0.9662 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 87 | Direction: North | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | global     |   0.9971 |   0.0000 | False
+  2 | global     |   0.9908 |   0.0000 | False
+  3 | global     |   0.9826 |   0.0000 | False
+ 24 | global     |   0.9662 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 87 | Direction: North | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | diurnal    |   0.9975 |   0.0000 | False
+  2 | diurnal    |   0.9923 |   0.0000 | False
+  3 | diurnal    |   0.9856 |   0.0000 | False
+ 24 | diurnal    |   0.9659 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 87 | Direction: North | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | raw        |   0.9996 |   0.0000 | False
+  2 | raw        |   0.9990 |   0.0000 | False
+  3 | raw        |   0.9985 |   0.0000 | False
+ 24 | raw        |   0.9871 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 87 | Direction: North | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | global     |   0.9996 |   0.0000 | False
+  2 | global     |   0.9990 |   0.0000 | False
+  3 | global     |   0.9985 |   0.0000 | False
+ 24 | global     |   0.9871 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 87 | Direction: North | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | diurnal    |   0.9996 |   0.0000 | False
+  2 | diurnal    |   0.9990 |   0.0000 | False
+  3 | diurnal    |   0.9985 |   0.0000 | False
+ 24 | diurnal    |   0.9871 |   0.0000 | False
+----------------------------------------------------------
+
+[Test] Running autocorrelation analysis for Hive 90
+
+=== AUTOCORRELATION TABLE ===
+Hive: 90 | Direction: South | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | raw        |   0.9965 |   0.0000 | False
+  2 | raw        |   0.9908 |   0.0000 | False
+  3 | raw        |   0.9838 |   0.0000 | False
+ 24 | raw        |   0.9353 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 90 | Direction: South | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | global     |   0.9965 |   0.0000 | False
+  2 | global     |   0.9908 |   0.0000 | False
+  3 | global     |   0.9838 |   0.0000 | False
+ 24 | global     |   0.9353 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 90 | Direction: South | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | diurnal    |   0.9967 |   0.0000 | False
+  2 | diurnal    |   0.9914 |   0.0000 | False
+  3 | diurnal    |   0.9849 |   0.0000 | False
+ 24 | diurnal    |   0.9352 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 90 | Direction: South | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | raw        |   0.9998 |   0.0000 | False
+  2 | raw        |   0.9993 |   0.0000 | False
+  3 | raw        |   0.9989 |   0.0000 | False
+ 24 | raw        |   0.9905 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 90 | Direction: South | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | global     |   0.9998 |   0.0000 | False
+  2 | global     |   0.9993 |   0.0000 | False
+  3 | global     |   0.9989 |   0.0000 | False
+ 24 | global     |   0.9905 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 90 | Direction: South | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | diurnal    |   0.9998 |   0.0000 | False
+  2 | diurnal    |   0.9993 |   0.0000 | False
+  3 | diurnal    |   0.9989 |   0.0000 | False
+ 24 | diurnal    |   0.9905 |   0.0000 | False
+----------------------------------------------------------
+
+[Test] Running autocorrelation analysis for Hive 99
+
+=== AUTOCORRELATION TABLE ===
+Hive: 99 | Direction: West | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | raw        |   0.9944 |   0.0000 | False
+  2 | raw        |   0.9863 |   0.0000 | False
+  3 | raw        |   0.9772 |   0.0000 | False
+ 24 | raw        |   0.9352 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 99 | Direction: West | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | global     |   0.9944 |   0.0000 | False
+  2 | global     |   0.9863 |   0.0000 | False
+  3 | global     |   0.9772 |   0.0000 | False
+ 24 | global     |   0.9352 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 99 | Direction: West | Variable: temp
+n = 6770 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | diurnal    |   0.9946 |   0.0000 | False
+  2 | diurnal    |   0.9872 |   0.0000 | False
+  3 | diurnal    |   0.9789 |   0.0000 | False
+ 24 | diurnal    |   0.9350 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 99 | Direction: West | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | raw        |   0.9998 |   0.0000 | False
+  2 | raw        |   0.9995 |   0.0000 | False
+  3 | raw        |   0.9992 |   0.0000 | False
+ 24 | raw        |   0.9925 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 99 | Direction: West | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | global     |   0.9998 |   0.0000 | False
+  2 | global     |   0.9995 |   0.0000 | False
+  3 | global     |   0.9992 |   0.0000 | False
+ 24 | global     |   0.9925 |   0.0000 | False
+----------------------------------------------------------
+
+=== AUTOCORRELATION TABLE ===
+Hive: 99 | Direction: West | Variable: weight
+n = 4752 | alpha = 0.05
+
+Lag | Detrending |  rho(k)  |  p-value  | H0 Not Rejected
+----------------------------------------------------------
+  1 | diurnal    |   0.9998 |   0.0000 | False
+  2 | diurnal    |   0.9995 |   0.0000 | False
+  3 | diurnal    |   0.9992 |   0.0000 | False
+ 24 | diurnal    |   0.9925 |   0.0000 | False
+----------------------------------------------------------
