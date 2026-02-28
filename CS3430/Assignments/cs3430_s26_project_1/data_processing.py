@@ -275,18 +275,20 @@ def autocorrelation(x: np.ndarray, lag: int) -> float:
 
     ### 1) Compute the mean of x and save it in the variable mean.
     ### You can use np.mean(sequence) here.
-    ### YOUR CODE HERE
+    mean = np.mean(x)
+
 
     ### 2) Compute the numerator of rho(k), where k = lag.
     ### You can use np.sum here along with the following
     ### NumPy array shortcut inside np.sum: (x[:n - lag] - mean) * (x[lag:] - mean).
     ### Save your computation in the variable num.
-    ### YOUR CODE HERE
+
+    num = np.sum((x[:n - lag] - mean) * (x[lag:] - mean))
 
     ### 3) Compute the denominator of rho(k) and save it in the
     ### variable den. Again, a useful NumPy shortcut here is to apply
     ### np.sum to (x - mean) ** 2.
-    ### YOUR CODE HERE
+    den = np.sum((x - mean) ** 2)
 
     if den == 0:
         raise ValueError("Variance is zero; autocorrelation undefined.")
@@ -325,7 +327,8 @@ def autocorrelation_test(x: np.ndarray, lag: int) -> tuple[float, float]:
     ### it in the variable z. Remember that
     ### the z statistic is sqrt(n) * rho.
     ### You can use math.sqrt here.
-    ### YOUR CODE HERE
+
+    z = math.sqrt(n) * rho
     
     ### 2.2) Compute the p-value of the z statistic
     ### and save in the variable p_value. Remember
@@ -333,7 +336,8 @@ def autocorrelation_test(x: np.ndarray, lag: int) -> tuple[float, float]:
     ### normal distribution of |z|. This can be
     ### done by doubling the value of the survival function
     ### on |z|, i.e., 2 * norm.sf(abs(z))
-    ### YOUR CODE HERE.
+
+    p_value = 2 * norm.sf(abs(z))
 
     ### 3) Return the z statistic and its p-value.
     return z, p_value
